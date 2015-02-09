@@ -1,0 +1,33 @@
+<%= form_for(@guestlist) do |f| %>
+  <% if @guestlist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guestlist.errors.count, "error") %> prohibited this guestlist from being saved:</h2>
+
+      <ul>
+      <% @guestlist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :notified %><br>
+    <%= f.check_box :notified %>
+  </div>
+  <div class="field">
+    <%= f.label :rsvp %><br>
+    <%= f.check_box :rsvp %>
+  </div>
+  <div class="field">
+    <%= f.label :attending %><br>
+    <%= f.number_field :attending %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

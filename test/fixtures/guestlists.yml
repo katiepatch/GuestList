@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  notified: false
+  rsvp: false
+  attending: 1
+
+two:
+  name: MyString
+  notified: false
+  rsvp: false
+  attending: 1
